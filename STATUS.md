@@ -5,7 +5,7 @@ repo: Rimworld-Nelim-Props-As-Deco
 remote: https://github.com/vbardales/Rimworld-Nelim-Props-As-Deco.git
 visibility: public             # public | private
 detached: yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: setupRepo
 licence: original              # original | open | alive | forbidden | silent
 licence_at: "2026-10-28: patch-only, nothing copied from any source (Chi_XiangLu now patched in place, not owned); the Chinese source 2877536640 forbids republication of its assets only, nothing here carries them"
 upstream_mod_remotes: N/A      # source mods are Workshop-only, no git repository found yet
@@ -18,6 +18,8 @@ workshop: private item 3811383060 (PublishedFileId.txt)
 published: no
 tested_on: never
 remaining:
+  - "2026-10-28: defect: 1.c repository name Rimworld-Nelim-Props-As-Deco keeps the private-extraction prefix (PUBLISHING.md Nommage: original creation is Rimworld-<Name>); rename to Rimworld-Props-As-Deco (gh repo rename, remote, STATUS) or justify in writing. Only unfulfilled sub-step of sections 1 to 6 (replay-audit 2026-10-28), stage set back to setupRepo for it"
+  - "2026-10-28: unverified: writeTests work left once 1.c is closed: 7.b Tests/Test-ChinesePatch.ps1 not declared in scripts/LOCAL_SCRIPTS.md (it still lists Run-Chinese.ps1 and Test-Chinese.ps1), 7.d Pickle decision written, 7.f tested sha, 7.i move to playTests"
   - "2026-10-28: unverified: 4.a packageId of Rabbie The Moonrabbit race (runnelatki.rabbieracemod, Workshop 1837246563) not verifiable: its folder is absent from the local Workshop content; the id is kept from the earlier audit"
   - "2026-10-28: unverified: 1.a duplicate check done with owner approval (Search-Workshop.sh, pattern SEX_Clutter|SEX_ClutterableSurface|Mlie.ColonistsDeco|DecoModExtension, *.xml, 9550 of 9552 folders, 843 lines): only the two engines, our own item 3811383060, our RimScent Extended (own defs) and Junkie Knick Knacks 3607387774 (bazoka81, adds its own clutter defs, not a patch of other mods' props) hold the tags. No equivalent mod found; one route only, not a proof of absence"
   - "2026-10-28: unverified: GitHub topics and settings of the private repo (privé: no social preview)"
