@@ -5,11 +5,11 @@ repo: Rimworld-Nelim-Props-As-Deco
 remote: https://github.com/vbardales/Rimworld-Nelim-Props-As-Deco.git
 visibility: public             # public | private
 detached: yes
-workflow_stage: settings[1.0.0]
+workflow_stage: localize[1.0.0]
 licence: original              # original | open | alive | forbidden | silent
 licence_at: "2026-10-28: patch-only, nothing copied from any source (Chi_XiangLu now patched in place, not owned); the Chinese source 2877536640 forbids republication of its assets only, nothing here carries them"
 upstream_mod_remotes: N/A      # source mods are Workshop-only, no git repository found yet
-settings_audit: unchecked      # not_applicable | complete | partial | passed | unchecked
+settings_audit: not_applicable  # justified in the Settings audit section below
 localization: unchecked
 translation_en: unchecked
 translation_fr: unchecked
@@ -24,7 +24,6 @@ remaining:
   - "2026-10-28: unverified: the Chinese source declares v1.2 to v1.5 in LoadFolders.xml, no v1.6 block: confirm in game that RimWorld 1.6 falls back to v1.5 so Chi_XiangLu exists for the patch (TESTING.md scenario 1)"
   - "2026-10-28: unverified: six manual scenarios of TESTING.md never executed; no Pickle suite, no automated unit test project (no C#); Tests/Test-ChinesePatch.ps1 passes (64 static assertions)"
   - "2026-10-28: unverified: repository made public after delete and recreate with a fresh history (old commits with the Chinese texture no longer resolve on GitHub); topics set. Left: GitHub social preview upload of Mod/About/Preview.png and social_preview_sha256 (required from writeDocs); Workshop item 3811383060 (old name and description) set public by the owner by hand, description updated by CI or the Steam page"
-  - "2026-10-28: unverified: settings audit not done (MOD_SETTINGS.md); no settings expected, absence of page and shortcut to confirm in sources"
 social_preview_sha256: ba5bb37afd0ddd0eb683d1273bbdcbf14c938fa5ff6dfc26e35a524ebbbb48a9
 protocols_read_sha: 7a1282c60cc188fb02a1bfaceec231e0f8d53669
 updated: 2026-10-28
@@ -43,6 +42,16 @@ Audited from `preTest` (retired) down to `setupRepo`: no push, local history unr
 makeSources to code[1.0.0] (same day): `Art/ModIcon-source.png` delivered by the owner; `Mod/About/ModIcon.png` regenerated (128x128, 30 KB) and `ModIcon.ico` current. First `Preview-source.png` failed the palette rule (Vmean 0.254, vignette, grain, upright front-elevation furniture, a readable face); the owner replaced it from a new prompt: Measure-Palette now gives Vmean 0.359 (>= 0.30), 2 hue families, vivid 40.9 %, dominant 92 %; flat sprites, no readable face (settlers from behind), table with six props identifiable at 268 px by eye. Old source stays in git history. Art/ holds sources, outputs and the provisional echo-concept.png (echo is redone at mountPreview). Preview regenerated from the new source: its panel and echo overlap the left half of the table, to settle at mountPreview with the gallery. The owner validated this Preview on 2026-10-28 and it was uploaded as the GitHub social preview the same day (og:image on repository-images.githubusercontent.com, sha256 in the front matter).
 
 On 2026-10-28 the owned copy of Chi_XiangLu and its texture (branch ChinesePrivate, licence forbidden, suffix prohibited) was replaced by a patch on the source mod's def, on the owner's go: the mod is patch-only again, licence original, name without suffix, no incompatibility with the source. Repository public since 2026-10-28. Seen below the current state: patch files under Mod/*/Patches/ carry French comments (English required in repo files, existing comments not rewritten).
+
+## Settings audit 2026-10-28 (revision 49eaf28, no game run)
+
+Result: not_applicable.
+
+Inventory (read from the 22 patch files and LoadFolders.xml, not from intent): the mod ships only xpath patches (PatchOperationAdd 485, Conditional 116, Replace 80, FindMod 18, Sequence 18, Remove 2) plus the Colonists' Deco comp and extension values they inject. No Def of its own, no Source/, no Assemblies/, no Languages/, no Keyed text, no MainButtonDef, no mod-settings class or element anywhere in Mod/ (a scan of every patch element name for MainButton, Settings, Keyed, LanguageData found nothing). So there is no empty settings page and no MainButtons shortcut to expose: both absent by construction, which is the verification of the No settings row of MOD_SETTINGS.md section 4.
+
+Player needs considered: (1) choose which source batches apply: already the player's choice by installing or not each source mod, LoadFolders gates each batch; (2) turn the architect hiding of Diner Supplies and Office Supplies (the two PatchOperationRemove) on or off: the only behaviour a player could plausibly want to change, but a toggle needs C# and a settings page for two removals, and the objects stay reachable through colonists, so no option is created; (3) per-object inclusion or room category: internal selection, not a player concern. Nothing proposed, nothing exposed.
+
+Exclusions: in-game checks (first use, access, persistence, RIMMSQOL) have nothing to exercise. Automated: Tests/Test-ChinesePatch.ps1 (64 assertions) and Check-ModBasics pass. Absence of C# alone is not the evidence, the scan above is.
 
 ## Dependencies 2026-10-28 (declareDependencies, revision after a567f19)
 
