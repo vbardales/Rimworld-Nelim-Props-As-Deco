@@ -59,7 +59,7 @@ on a mod being present comes from its `SurfaceBlacklist.xml`.
 
 Not a line is copied from any of these mods; it is the methods that are borrowed.
 
-## Nelim's Halloween Monster Mash
+## Halloween Monster Mash Renew (unofficial)
 
 - **Adapted by:** Nelim, from [KD] Killer_Diller's "Hallowen Monster Mash"
 - **Taken:** nothing.

@@ -28,4 +28,7 @@ Assert (@($m.loadAfter.li) -contains 'Dajian.ChiTeaditional.Expanded') 'Source m
 Assert ($null -eq $m.modDependencies) 'Source mod must stay optional'
 Assert ($null -eq $m.incompatibleWith) 'Stale incompatibility with the source mod'
 Assert ($m.name -eq 'Props as Deco' -and $m.author -eq 'Nelim') 'Name or author changed'
-Write-Output "PASS: $count assertions; XML, no copied asset, guarded patch folder, Chi_XiangLu-only xpath, tags, optional dependency. No in-game execution."
+# Every IfModActive id of LoadFolders is declared in loadAfter (case-insensitive), so load order and activation use the same ids.
+$declared=@($m.loadAfter.li | ForEach-Object {$_.ToLower()})
+foreach($li in @($lf.SelectNodes('/loadFolders/v1.6/li[@IfModActive]'))){Assert ($declared -contains $li.GetAttribute('IfModActive').ToLower()) "IfModActive id not in loadAfter: $($li.GetAttribute('IfModActive'))"}
+Write-Output "PASS: $count assertions; XML, no copied asset, guarded patch folder, Chi_XiangLu-only xpath, tags, optional dependency, IfModActive ids in loadAfter. No in-game execution."
