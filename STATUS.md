@@ -18,7 +18,6 @@ workshop: private item 3811383060 (PublishedFileId.txt)
 published: no
 tested_on: never
 remaining:
-  - "2026-10-28: unverified: French review line of FRENCH_REVIEW.md is empty (owner); the file states French is not applicable because the mod adds no text"
   - "2026-10-28: unverified: 4.a packageId of Rabbie The Moonrabbit race (runnelatki.rabbieracemod, Workshop 1837246563) not verifiable: its folder is absent from the local Workshop content; the id is kept from the earlier audit"
   - "2026-10-28: unverified: 1.a duplicate check done with owner approval (Search-Workshop.sh, pattern SEX_Clutter|SEX_ClutterableSurface|Mlie.ColonistsDeco|DecoModExtension, *.xml, 9550 of 9552 folders, 843 lines): only the two engines, our own item 3811383060, our RimScent Extended (own defs) and Junkie Knick Knacks 3607387774 (bazoka81, adds its own clutter defs, not a patch of other mods' props) hold the tags. No equivalent mod found; one route only, not a proof of absence"
   - "2026-10-28: unverified: GitHub topics and settings of the private repo (privé: no social preview)"
@@ -53,6 +52,8 @@ Inventory, from the files and not from the absence of C#: no Def of its own (the
 FRENCH_REVIEW.md carries the standard sentence "This mod adds no player-facing strings requiring translation. French localization is not applicable." and an empty review line for the owner. A session never fills that line.
 
 ChatGPT review (review-translation, page 1 of 1 of FRENCH_REVIEW.md, 2026-10-28): no linguistic correction; FRENCH_REVIEW.md consistent (no player-facing string, French not applicable); CHANGELOG.md out of scope (append-only); PUBLICATION.md not reviewable because it does not exist yet (written at writeDocs). Nothing to apply. This is not the owner review.
+
+Owner review: Virginie, 2026-10-28, revision fb2ca3651c769cf4b6003c0a7f341af1db1aa892 (FRENCH_REVIEW.md generated at 49eaf28, Mod/ unchanged since): French validated in chat, no correction requested. Recorded here by the session on her confirmation; the table of FRENCH_REVIEW.md is generated and was not edited.
 
 ## Settings audit 2026-10-28 (revision 49eaf28, no game run)
 
