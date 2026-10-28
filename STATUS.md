@@ -52,6 +52,8 @@ Inventory, from the files and not from the absence of C#: no Def of its own (the
 
 FRENCH_REVIEW.md carries the standard sentence "This mod adds no player-facing strings requiring translation. French localization is not applicable." and an empty review line for the owner. A session never fills that line.
 
+ChatGPT review (review-translation, page 1 of 1 of FRENCH_REVIEW.md, 2026-10-28): no linguistic correction; FRENCH_REVIEW.md consistent (no player-facing string, French not applicable); CHANGELOG.md out of scope (append-only); PUBLICATION.md not reviewable because it does not exist yet (written at writeDocs). Nothing to apply. This is not the owner review.
+
 ## Settings audit 2026-10-28 (revision 49eaf28, no game run)
 
 Result: not_applicable.
