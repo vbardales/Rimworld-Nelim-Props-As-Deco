@@ -22,7 +22,7 @@ remaining:
   - "2026-10-28: unverified: GitHub topics and settings of the private repo (privé: no social preview)"
   - "2026-10-28: unverified: the Chinese source declares v1.2 to v1.5 in LoadFolders.xml, no v1.6 block: confirm in game that RimWorld 1.6 falls back to v1.5 so Chi_XiangLu exists for the patch (TESTING.md scenario 1)"
   - "2026-10-28: unverified: six manual scenarios of TESTING.md never executed; no Pickle suite, no automated unit test project (no C#); Tests/Test-ChinesePatch.ps1 passes (44 static assertions)"
-  - "2026-10-28: unverified: owner decision pending on making the repository and the Workshop item public now that nothing is copied (item 3811383060 still carries the old private description and name)"
+  - "2026-10-28: unverified: repository stays private until GitHub Support has purged the old commits (the forbidden Chinese texture and def sat in history until the fresh-history force push 585a660; unreachable objects may stay fetchable by SHA). Then: gh repo edit visibility public, topics rimworld, rimworld-mod, mod, social preview upload and social_preview_sha256. Workshop item 3811383060 (old name and description) is set public by the owner by hand"
   - "2026-10-28: unverified: settings audit not done (MOD_SETTINGS.md); no settings expected, absence of page and shortcut to confirm in sources"
 protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 updated: 2026-10-28
