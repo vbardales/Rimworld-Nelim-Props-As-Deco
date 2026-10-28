@@ -3,7 +3,7 @@ mod: Props as Deco
 packageId: nelim.propsasdeco
 repo: Rimworld-Nelim-Props-As-Deco
 remote: https://github.com/vbardales/Rimworld-Nelim-Props-As-Deco.git
-visibility: private            # public | private
+visibility: public             # public | private
 detached: yes
 workflow_stage: makeSources
 licence: original              # original | open | alive | forbidden | silent
@@ -22,7 +22,7 @@ remaining:
   - "2026-10-28: unverified: GitHub topics and settings of the private repo (privé: no social preview)"
   - "2026-10-28: unverified: the Chinese source declares v1.2 to v1.5 in LoadFolders.xml, no v1.6 block: confirm in game that RimWorld 1.6 falls back to v1.5 so Chi_XiangLu exists for the patch (TESTING.md scenario 1)"
   - "2026-10-28: unverified: six manual scenarios of TESTING.md never executed; no Pickle suite, no automated unit test project (no C#); Tests/Test-ChinesePatch.ps1 passes (44 static assertions)"
-  - "2026-10-28: unverified: repository stays private until GitHub Support has purged the old commits (the forbidden Chinese texture and def sat in history until the fresh-history force push 585a660; unreachable objects may stay fetchable by SHA). Then: gh repo edit visibility public, topics rimworld, rimworld-mod, mod, social preview upload and social_preview_sha256. Workshop item 3811383060 (old name and description) is set public by the owner by hand"
+  - "2026-10-28: unverified: repository made public after delete and recreate with a fresh history (old commits with the Chinese texture no longer resolve on GitHub); topics set. Left: GitHub social preview upload of Mod/About/Preview.png and social_preview_sha256 (required from writeDocs); Workshop item 3811383060 (old name and description) set public by the owner by hand, description updated by CI or the Steam page"
   - "2026-10-28: unverified: settings audit not done (MOD_SETTINGS.md); no settings expected, absence of page and shortcut to confirm in sources"
 protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 updated: 2026-10-28
@@ -38,4 +38,4 @@ Patch-only integrations of other mods' props into Knick Knacks (surfaces, 330 ob
 
 Audited from `preTest` (retired) down to `setupRepo`: no push, local history unrelated to `origin/main`, 1.d status mentions and 1.g English docs missing, `STATUS.md` off template. Then fixed the same day: histories reconciled by rebase onto `origin/main` (local content kept on every conflict) and pushed; `About.xml` name, author and `PERSONAL USE ONLY` paragraph, README title and paragraph, English `CHANGELOG.md`, `LICENSE` aligned with `Mod/LICENSE`, 1.a duplicate check done. `Check-Status`, `Check-ModBasics` and `Tests/Test-ChinesePatch.ps1` pass. Moved to `makeSources` (1.k).
 
-On 2026-10-28 the owned copy of Chi_XiangLu and its texture (branch ChinesePrivate, licence forbidden, suffix prohibited) was replaced by a patch on the source mod's def, on the owner's go: the mod is patch-only again, licence original, name without suffix, no incompatibility with the source. Visibility unchanged (private). Seen below the current state: patch files under Mod/*/Patches/ carry French comments (English required in repo files, existing comments not rewritten).
+On 2026-10-28 the owned copy of Chi_XiangLu and its texture (branch ChinesePrivate, licence forbidden, suffix prohibited) was replaced by a patch on the source mod's def, on the owner's go: the mod is patch-only again, licence original, name without suffix, no incompatibility with the source. Repository public since 2026-10-28. Seen below the current state: patch files under Mod/*/Patches/ carry French comments (English required in repo files, existing comments not rewritten).
