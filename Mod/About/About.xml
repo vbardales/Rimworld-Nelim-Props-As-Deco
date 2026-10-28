@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Props as Deco</name>
+  <author>Nelim</author>
+  <packageId>nelim.propsasdeco</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Props as Deco connects decorative objects to Knick Knacks (surfaces) and Colonists' Deco (walls). Every integration is an optional XML patch on the source mod's own defs: nothing is copied from any source, and each batch loads only when its source mod is active.
+
+Chinese Traditional Cultural Things Expanded: its decorative incense burner is registered with Knick Knacks so colonists can place it on tables. The def and texture stay in that mod.
+
+Surface tags are inert without Knick Knacks; wall patches are guarded by Colonists' Deco.</description>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>leo.propsdecor</li>
+    <li>whaley.whaleysprops</li>
+    <li>lunartika.os</li>
+    <li>dsp.lun</li>
+    <li>zal.toomanyprops</li>
+    <li>ponpeco.pfkidsroom</li>
+    <li>brucethemoose.hotspring</li>
+    <li>seti.random.decor</li>
+    <li>mgatwood.housedecor</li>
+    <li>gmmp.graveyard</li>
+    <li>runnelatki.rabbieracemod</li>
+    <li>ucp.walldecorations</li>
+    <li>unagi.funiture.build.window</li>
+    <li>Mlie.ColonistsDeco</li>
+    <li>vaguelysexual.modpackageid.goeshere</li>
+    <li>mos.victoriandecorations</li>
+    <li>mo.decorationsluxury</li>
+    <li>ucp.tabletopdecorations</li>
+    <li>sarg.alphapropsparks</li>
+    <li>Dajian.ChiTeaditional.Expanded</li>
+  </loadAfter>
+</ModMetaData>

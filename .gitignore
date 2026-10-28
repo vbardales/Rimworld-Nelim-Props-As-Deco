@@ -1,0 +1,20 @@
+# Ce mod ne contient aucun code : rien a compiler, rien d'intermediaire.
+.build/
+
+# Environnements de developpement
+.vs/
+.vscode/
+.idea/
+
+# Systeme
+Thumbs.db
+desktop.ini
+.DS_Store
+evidence/
+Tests/Pickle/Evidence/
+Art/.render/
+*.dds
+**/Source/obj/
+**/Source/bin/
+**/Source/**/obj/
+**/Source/**/bin/
